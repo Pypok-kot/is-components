@@ -28,14 +28,25 @@ const props = withDefaults(defineProps<IProps>(), {
   padding: 16px 32px;
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--color-white);
-  background: var(--color-primary);
+  color: #000000;
+  background: #ffd904;
+  border: 2px solid #000000;
   border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #000000;
+    color: #ff7b00;
+    border-color: #ff7b00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 123, 0, 0.3);
+  }
 
   &[data-layout='secondary'] {
-    color: var(--color-primary);
-    background-color: var(--color-transparent);
-    border-color: var(--color-primary);
-  }
+    color: #000000;
+    background-color: transparent;
+    border-color: #000000;
+  } 
 }
-</style>
+  </style>
